@@ -1,0 +1,18 @@
+name: Staging
+
+on:
+  workflow_dispatch:
+
+jobs:
+  run-steps:
+    name: Run Steps
+    runs-on: ubuntu-latest
+    steps:
+      - name: Step 1
+        run: sleep 30
+      - name: Step 2
+        run: sleep 30
+      - name: Fail
+        run: |
+          sleep 30
+          exit 1
